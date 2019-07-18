@@ -75,10 +75,10 @@ class LASItem(object):
 
     @classmethod
     def from_line(cls, line):                       # method called by LASReader
-        first, descr = line.rsplit(':', 1)
-        descr = descr.strip()
-        name, mid = first.split('.', 1)
-        name = name.strip()
+        first, descr = line.rsplit(':', 1)          # rsplit (, 1) splits once, returns two elements
+        descr = descr.strip()                       # removes leading, trailing spaces
+        name, mid = first.split('.', 1)             # split on '.' once, ie two elements
+        name = name.strip()                         # removes leading, trailing whitespace
         if mid.startswith(' '):
             # No units
             units = ''
@@ -307,12 +307,12 @@ class LASReader(object):
         line = f.readline()
         current_section = None
         current_section_label = ''
-        while not line.startswith('~A'):                   # Not the Log Data Section
+        while not line.startswith('~A'):                   # Stop at the Log Data Section
             if not line.startswith('#'):                   # Not a comment line
-                if line.startswith('~'):                   # The other (non Log) sections
+                if line.startswith('~'):                   # The other (non Log) sections (~Version, ~Well, etc)
                     if len(line) < 2:
                         raise LASError("Missing section character after '~'.")
-                    current_section_label = line[1:2]      # The character after the '~'
+                    current_section_label = line[1:2]      # The character after the '~' (V, W, etc)
                     other = False                          # Assumes no "Other" section exits...
                     if current_section_label == 'V':       # ~Version information
                         current_section = self.version

@@ -5,6 +5,8 @@ The resulting output will be in a form so that interval sonic logs and interval 
 
 WORKING.ipynb : (using Tops files) is basically complete.  It will pull tops data from npd.no website and combine them with tops exported from a Petrel project.  Adds isochron and interval velocity columns.
 
+def_tops.ipynb : functional version of WORKING.ipynb (in progress)
+
 las.py : program written by Warren Weckesser to load las files into Python
 
 load_checkshot_file.ipynb : work in progress

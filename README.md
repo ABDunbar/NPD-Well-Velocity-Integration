@@ -12,3 +12,5 @@ load_checkshot_file.ipynb : work in progress
 load_multiple_sonic.ipynb : work in progress
 
 m172.ipynb :  In progress version of the M172 Velocity Modeling training course (Alan Atkinson)
+
+sonic_las_files_edit.ipynb : (in progress) uses las.py to load sonic logs.  Uses depth and sonic, calculates velocity, one-way-time

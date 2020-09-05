@@ -3,8 +3,12 @@ This program with take checkshot data and sonic logs from Petrel export and form
 
 The resulting output will be in a form so that interval sonic logs and interval velocities from the checkshot can be compared.
 
-Currently, WORKING.ipynb (using Tops files) is basically complete.
+WORKING.ipynb : (using Tops files) is basically complete.  It will pull tops data from npd.no website and combine them with tops exported from a Petrel project.  Adds isochron and interval velocity columns.
 
-load_sonic and load_checkshot are incomplete
+las.py : program written by Warren Weckesser to load las files into Python
 
-m172 is a (incomplete) version of the M172 Velocity Modeling training course (I think by Alan Atkinson)
+load_checkshot_file.ipynb : work in progress
+
+load_multiple_sonic.ipynb : work in progress
+
+m172.ipynb :  In progress version of the M172 Velocity Modeling training course (Alan Atkinson)

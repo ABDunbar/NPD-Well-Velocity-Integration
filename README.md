@@ -3,9 +3,8 @@ This program with take checkshot data and sonic logs from Petrel export and form
 
 The resulting output will be in a form so that interval sonic logs and interval velocities from the checkshot can be compared.
 
-WORKING.ipynb : (using Tops files) is basically complete.  It will pull tops data from npd.no website and combine them with tops exported from a Petrel project.  Adds isochron and interval velocity columns.
 
-def_tops.ipynb : functional version of WORKING.ipynb (in progress)
+def_tops.ipynb : (in progress)
 
 Folder package
 
